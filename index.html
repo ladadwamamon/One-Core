@@ -1405,38 +1405,52 @@ setTimeout(() => {
 /* ---- LANGUAGE TOGGLE ---- */
 const T = {
     ar: {
-        n1:'من نحن', n2:'خدماتنا', n3:'قيمتنا', n4:'نموذجنا', n5:'تواصل معنا',
-        m1:'من نحن', m2:'رؤيتنا ورسالتنا', m3:'خدماتنا', m4:'قيمتنا', m5:'نموذجنا', m6:'تواصل معنا',
-        hBadge: 'شريكك الأول في إدارة أعمالك',
-        hTag:   'إدارة متكاملة\u00a0•\u00a0نتائج أفضل',
-        hDesc:  'نقدّم حلول دعم وتطوير وإدارة أعمال متكاملة، لتتمكن من التركيز على نمو مشروعك بينما نتولى نحن الجوانب الإدارية والتشغيلية باحترافية عالية.',
-        hBtn1: 'اكتشف خدماتنا', hBtn2: 'تواصل معنا',
-        aTag: 'من نحن',       aTitle: 'شريكك الخارجي <span class="hl">المتكامل</span>',
-        vmTag: 'ما يحركنا',   vmTitle: 'رؤيتنا <span class="hl">ورسالتنا</span>',
-        chTag: 'المشكلة',     chTitle: 'التحديات <span class="hl">الإدارية</span>',
-        sTag: 'ما نقدمه',     sTitle: 'خدماتنا <span class="hl">المتكاملة</span>',
-        s1:'إدارة التشغيل', s2:'إدارة التسويق', s3:'الإدارة المالية والمحاسبة', s4:'إدارة الموارد البشرية',
-        vTag: 'لماذا نحن',   vTitle: 'القيمة التي <span class="hl">نقدمها</span>',
-        solTag:'كيف نقدم الحل', solTitle:'نموذجنا <span class="hl">المتميز</span>',
-        cTag: 'تواصل معنا',  cTitle: 'ابدأ معنا <span class="hl">اليوم</span>',
-        cBtn: 'إرسال الرسالة', langLbl: 'EN',
+        langLbl:'EN',
+        nav:['من نحن','خدماتنا','قيمتنا','نموذجنا','تواصل معنا'],
+        mob:['من نحن','رؤيتنا ورسالتنا','خدماتنا','قيمتنا','نموذجنا','تواصل معنا'],
+        heroBadge:'شريكك الأول في إدارة أعمالك',
+        heroTag:'إدارة متكاملة\u00a0•\u00a0نتائج أفضل',
+        heroDesc:'نقدّم حلول دعم وتطوير وإدارة أعمال متكاملة، لتتمكن من التركيز على نمو مشروعك بينما نتولى نحن الجوانب الإدارية والتشغيلية باحترافية عالية.',
+        heroBtns:['اكتشف خدماتنا','تواصل معنا'],
+        scroll:'تمرير',
+        sectionTags:['من نحن','ما يحركنا','المشكلة','ما نقدمه','لماذا نحن','كيف نقدم الحل','تواصل معنا'],
+        sectionTitles:[
+            'شريكك الخارجي <span class="hl">المتكامل</span>',
+            'رؤيتنا <span class="hl">ورسالتنا</span>',
+            'التحديات <span class="hl">الإدارية</span>',
+            'خدماتنا <span class="hl">المتكاملة</span>',
+            'القيمة التي <span class="hl">نقدمها</span>',
+            'نموذجنا <span class="hl">المتميز</span>',
+            'ابدأ معنا <span class="hl">اليوم</span>'
+        ],
+        formBtn:'إرسال الرسالة',
+        formSuccess:'تم الإرسال بنجاح ✓',
+        waTip:'تواصل معنا',
+        pageTitle:'One Core — إدارة متكاملة، نتائج أفضل'
     },
     en: {
-        n1:'About Us', n2:'Services', n3:'Our Value', n4:'Our Model', n5:'Contact Us',
-        m1:'About Us', m2:'Vision & Mission', m3:'Services', m4:'Our Value', m5:'Our Model', m6:'Contact Us',
-        hBadge: 'Your #1 Business Management Partner',
-        hTag:   'Integrated Management • Better Results',
-        hDesc:  'We provide integrated business support, development, and management solutions — so you can focus on growing your business while we handle all administrative and operational aspects with excellence.',
-        hBtn1: 'Explore Services', hBtn2: 'Contact Us',
-        aTag: 'Who We Are',    aTitle: 'Your <span class="hl">Integrated</span> External Partner',
-        vmTag: 'What Drives Us', vmTitle: 'Our Vision <span class="hl">& Mission</span>',
-        chTag: 'The Problem',  chTitle: 'Administrative <span class="hl">Challenges</span>',
-        sTag: 'What We Offer', sTitle: 'Our <span class="hl">Integrated</span> Services',
-        s1:'Operations Management', s2:'Marketing Management', s3:'Financial Management & Accounting', s4:'Human Resources Management',
-        vTag: 'Why Us',       vTitle: 'The Value We <span class="hl">Deliver</span>',
-        solTag:'How We Solve It', solTitle:'Our <span class="hl">Distinctive</span> Model',
-        cTag: 'Get In Touch', cTitle: 'Start With Us <span class="hl">Today</span>',
-        cBtn: 'Send Message',  langLbl: 'عربي',
+        langLbl:'عربي',
+        nav:['About Us','Services','Our Value','Our Model','Contact Us'],
+        mob:['About Us','Vision & Mission','Services','Our Value','Our Model','Contact Us'],
+        heroBadge:'Your #1 Business Management Partner',
+        heroTag:'Integrated Management • Better Results',
+        heroDesc:'We provide integrated business support, development, and management solutions so you can focus on growth while we handle administrative and operational work with excellence.',
+        heroBtns:['Explore Services','Contact Us'],
+        scroll:'Scroll',
+        sectionTags:['Who We Are','What Drives Us','The Problem','What We Offer','Why Us','How We Solve It','Get In Touch'],
+        sectionTitles:[
+            'Your <span class="hl">Integrated</span> External Partner',
+            'Our Vision <span class="hl">&amp; Mission</span>',
+            'Administrative <span class="hl">Challenges</span>',
+            'Our <span class="hl">Integrated</span> Services',
+            'The Value We <span class="hl">Deliver</span>',
+            'Our <span class="hl">Distinctive</span> Model',
+            'Start With Us <span class="hl">Today</span>'
+        ],
+        formBtn:'Send Message',
+        formSuccess:'Message Sent Successfully ✓',
+        waTip:'Contact Us',
+        pageTitle:'One Core — Integrated Management, Better Results'
     }
 };
 
@@ -1446,63 +1460,94 @@ function toggleLang() {
     siteLang = siteLang === 'ar' ? 'en' : 'ar';
     const isEn = siteLang === 'en';
     const t = T[siteLang];
-    const $ = s => document.querySelector(s);
-    const set = (s, v) => { const el = $(s); if (el) el.innerHTML = v; };
+    const $ = (s, p = document) => p.querySelector(s);
+    const $$ = (s, p = document) => Array.from(p.querySelectorAll(s));
+    const set = (s, v, p = document) => { const el = $(s, p); if (el) el.innerHTML = v; };
+    const txt = (s, v, p = document) => { const el = $(s, p); if (el) el.textContent = v; };
 
     document.documentElement.lang = siteLang;
     document.documentElement.dir = isEn ? 'ltr' : 'rtl';
     document.getElementById('langBtn').textContent = t.langLbl;
+    t.nav.forEach((val, i) => txt(`.nav-links li:nth-child(${i + 1}) a`, val));
+    t.mob.forEach((val, i) => txt(`#mob a:nth-child(${i + 1})`, val));
+    txt('.h-badge', t.heroBadge);
+    txt('.h-tag', t.heroTag);
+    txt('.h-desc', t.heroDesc);
+    txt('.h-btns .btn-p', t.heroBtns[0]);
+    txt('.h-btns .btn-o', t.heroBtns[1]);
+    txt('.scroll-hint span', t.scroll);
 
-    // Nav
-    set('.nav-links li:nth-child(1) a', t.n1);
-    set('.nav-links li:nth-child(2) a', t.n2);
-    set('.nav-links li:nth-child(3) a', t.n3);
-    set('.nav-links li:nth-child(4) a', t.n4);
-    const cta = document.querySelector('.nav-links li:nth-child(5) a');
-    if (cta) { cta.textContent = t.n5; }
-    set('#mob a:nth-child(1)', t.m1);
-    set('#mob a:nth-child(2)', t.m2);
-    set('#mob a:nth-child(3)', t.m3);
-    set('#mob a:nth-child(4)', t.m4);
-    set('#mob a:nth-child(5)', t.m5);
-    set('#mob a:nth-child(6)', t.m6);
+    t.sectionTags.forEach((val, i) => txt(`section:nth-of-type(${i + 2}) .sh-tag`, val));
+    t.sectionTitles.forEach((val, i) => set(`section:nth-of-type(${i + 2}) .sh-title`, val));
+    txt('.f-submit', t.formBtn);
+    txt('.wa-tooltip', t.waTip);
+    document.title = t.pageTitle;
 
-    // Hero
-    set('.h-badge', t.hBadge);
-    set('.h-tag', t.hTag);
-    set('.h-desc', t.hDesc);
-    set('.h-btns .btn-p', t.hBtn1);
-    set('.h-btns .btn-o', t.hBtn2);
+    // Full English content blocks
+    if (isEn) {
+        set('#about .about-text p:nth-of-type(1)', 'We are a specialized company in <strong>business support, development, and management solutions</strong>, created to serve organizations seeking operational excellence, lower costs, and stronger performance.');
+        set('#about .about-text p:nth-of-type(2)', 'Our modern model provides an integrated team that acts as your <strong>external partner</strong>, handling essential administrative and operational functions with full confidentiality, so owners can focus on strategic growth and decisions.');
+        ['Integrated professional team across all admin areas','Full confidentiality and data privacy','Flexible service tailored to your business','Lower fixed costs while preserving quality'].forEach((v,i)=>{ const el=$$('.ab-check')[i]; if(el) el.lastChild.textContent=' '+v;});
+        ['Commitment to quality and professionalism','Integrated management services','Leaders in Palestinian market','Single point of contact for your business'].forEach((v,i)=> txt(`.scard:nth-child(${i+1}) .scard-lbl`, v));
+        txt('.scard:nth-child(3) .scard-num', 'Palestine');
+        document.querySelector('.scard:nth-child(4) .scard-num').dataset.suffix = ' entity';
 
-    // Sections
-    set('#about .sh-tag', t.aTag);
-    set('#about .sh-title', t.aTitle);
-    set('#vm .sh-tag', t.vmTag);
-    set('#vm .sh-title', t.vmTitle);
-    set('#challenge .sh-tag', t.chTag);
-    set('#challenge .sh-title', t.chTitle);
-    set('#services .sh-tag', t.sTag);
-    set('#services .sh-title', t.sTitle);
-    set('#value .sh-tag', t.vTag);
-    set('#value .sh-title', t.vTitle);
-    set('#solution .sh-tag', t.solTag);
-    set('#solution .sh-title', t.solTitle);
-    set('#contact .sh-tag', t.cTag);
-    set('#contact .sh-title', t.cTitle);
-    set('.f-submit', t.cBtn);
+        txt('.vm-card:nth-child(1) .vm-label','Our Vision');
+        txt('.vm-card:nth-child(1) .vm-title','To be the first partner for business owners in Palestine');
+        txt('.vm-card:nth-child(1) .vm-text','To help organize and manage businesses, and contribute to building companies that are more stable, efficient, and sustainable.');
+        txt('.vm-card:nth-child(2) .vm-label','Our Mission');
+        txt('.vm-card:nth-child(2) .vm-title','Empowering business owners to focus on growth');
+        txt('.vm-card:nth-child(2) .vm-text','By taking over administrative and operational aspects with high professionalism through a flexible model that reduces costs and enhances transparency and quality.');
 
-    // Service card titles
-    const svcs = document.querySelectorAll('.svc-title');
-    [t.s1,t.s2,t.s3,t.s4].forEach((v,i) => { if (svcs[i]) svcs[i].textContent = v; });
+        set('#challenge .ch-text p:nth-of-type(1)','Many companies and business owners face recurring management challenges due to <strong>scattered responsibilities</strong>, high hiring costs, and weak integration between administrative and operational functions.');
+        txt('#challenge .ch-text p:nth-of-type(2)','These challenges slow decisions, weaken follow-up, and increase operational and financial risk.');
+        ['Multiple responsible parties inside the company','High fixed operating costs and salaries','Management time consumed by daily details','Lack of coordination between financial, legal, and operations teams'].forEach((v,i)=>{ const el=$$('.ch-item')[i]; if(el) el.lastChild.textContent=' '+v;});
+        txt('.ch-visual .ch-big-lbl:nth-of-type(1)','Times the cost when each role is handled by a separate employee');
+        txt('.ch-visual .ch-big-lbl:nth-of-type(2)','Of owner time is wasted on operational details');
 
-    // WA float tooltip
-    const waTooltip = document.querySelector('.wa-tooltip');
-    if (waTooltip) waTooltip.textContent = isEn ? 'Contact Us' : 'تواصل معنا';
+        txt('#services .sh-desc','Four core management tracks delivered completely as a trusted external partner so you can focus on building your business.');
+        ['Operations Management','Marketing Management','Financial Management & Accounting','Human Resources Management'].forEach((v,i)=>txt(`.svc:nth-child(${i+1}) .svc-title`,v));
+        const enLists = [
+            ['Organize daily operations','Track task execution','Coordinate cross-department work','Operational reporting and performance tracking'],
+            ['Manage social media pages','Manage ad campaigns','Create professional content','Performance-based marketing plans','Reporting and continuous optimization'],
+            ['Bookkeeping and accounting organization','Track revenues and expenses','Periodic closing and financial reports','Track obligations and payroll','Decision-support analytics'],
+            ['Attendance and leave management','Payroll and incentives management','Employee data analysis','HR integration across all company departments']
+        ];
+        $$('.svc-list').forEach((ul,ui)=>$$('li',ul).forEach((li,lii)=>{ if(enLists[ui] && enLists[ui][lii]) li.textContent=enLists[ui][lii]; }));
 
-    // Page title
-    document.title = isEn
-        ? 'One Core — Integrated Management, Better Results'
-        : 'One Core — إدارة متكاملة، نتائج أفضل';
+        txt('#value .sh-desc','Through our model, we provide core values that directly impact business growth.');
+        ['Improve performance efficiency','Organize internal workflow','Reduce administrative risks','Lower operational costs','Save owner time and effort'].forEach((v,i)=>txt(`.val-card:nth-child(${i+1}) .val-card-text`,v));
+        txt('.val-big-lbl:nth-of-type(1)','Commitment to professional, confidential delivery');
+        txt('.val-big:nth-of-type(2)','One Point');
+        txt('.val-big-lbl:nth-of-type(2)','For communication instead of managing multiple teams');
+
+        set('.sol-big','Integrated Management<br><em>Better Results</em>');
+        txt('.sol-text','We provide a model that combines core management functions within one structured framework, enabling owners to deal with one partner instead of multiple parties, with clear responsibilities, continuous follow-up, and easier decision-making while reducing operating costs.');
+        txt('#solution .sh-desc','Four advantages that make our model better than hiring an internal team.');
+        ['Single contact point for business management','Clear responsibilities and tasks','Flexible service scope based on business type','Reduced administrative, operational, and payroll burdens'].forEach((v,i)=>{ const el=$$('.sol-item')[i]; if(el) el.lastChild.textContent=' '+v;});
+
+        txt('#contact .sh-desc','Ready to transform how your business is managed? Contact us and get a free consultation on how we can help.');
+        ['Email','WhatsApp','Facebook','Instagram'].forEach((v,i)=>txt(`.ci:nth-child(${i+1}) .ci-lbl`,v));
+        ['WhatsApp','Facebook','Instagram'].forEach((v,i)=>{ const el=$$('.soc')[i]; if(el) el.lastChild.textContent=' '+v;});
+        ['First Name','Last Name','Email','Phone Number','Service Required','Your Message'].forEach((v,i)=>txt(`.fg:nth-child(${i+1}) label`,v));
+        const ph = ['John','Doe','example@company.com','+970 5XX XXX XXX','','Tell us about your project and requirements...'];
+        const fields = ['.fg:nth-child(1) input','.fg:nth-child(2) input','.fg:nth-child(3) input','.fg:nth-child(4) input','.fg:nth-child(6) textarea'];
+        fields.forEach((sel, i)=>{ const el=$(sel); if(el) el.placeholder=ph[i]; });
+        const opts = $$('select option');
+        ['Select a service...','Operations Management','Marketing Management','Financial Management & Accounting','Human Resources Management','All Services (Integrated Package)'].forEach((v,i)=>{ if(opts[i]) opts[i].textContent=v; });
+
+        txt('.foot-brand p','A specialized company delivering business support, development, and management services. We act as your integrated external partner to help your business grow.');
+        txt('.fcol:nth-child(2) h5','Services');
+        txt('.fcol:nth-child(3) h5','Company');
+        ['Operations Management','Marketing Management','Financial Management & Accounting','Human Resources Management'].forEach((v,i)=>txt(`.fcol:nth-child(2) li:nth-child(${i+1}) a`,v));
+        ['About Us','Vision & Mission','Our Value','Contact Us'].forEach((v,i)=>txt(`.fcol:nth-child(3) li:nth-child(${i+1}) a`,v));
+        set('.fcopy','© 2025 <em>One Core</em>. All rights reserved — Palestine');
+        txt('.fleg a:nth-child(1)','Privacy Policy');
+        txt('.fleg a:nth-child(2)','Terms of Service');
+    } else {
+        // restore Arabic original content quickly on switch back by reload-safe reset
+        window.location.reload();
+    }
 }
 
 /* ---- CONTACT FORM ---- */
@@ -1510,11 +1555,11 @@ document.getElementById('cForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('.f-submit');
     const t = T[siteLang];
-    btn.textContent = t.formSuccess;
+    btn.textContent = t.formSuccess || 'Message Sent ✓';
     btn.style.background = '#4ade80';
     btn.style.color = '#0f1e2b';
     setTimeout(() => {
-        btn.textContent = t.cBtn;
+        btn.textContent = t.formBtn || 'Send Message';
         btn.style.background = '';
         btn.style.color = '';
         this.reset();
