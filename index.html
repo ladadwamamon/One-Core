@@ -1244,30 +1244,34 @@
                 </div>
             </div>
             <div class="con-form rv-r">
-                <form id="cForm">
+                <form id="cForm" action="https://formsubmit.co/info@onecore.ps" method="POST">
+                    <input type="hidden" name="_subject" value="New One Core Website Lead">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
                     <div class="f-row">
                         <div class="fg">
                             <label>الاسم الأول</label>
-                            <input type="text" placeholder="محمد">
+                            <input type="text" name="first_name" placeholder="محمد" required autocomplete="given-name">
                         </div>
                         <div class="fg">
                             <label>اسم العائلة</label>
-                            <input type="text" placeholder="أحمد">
+                            <input type="text" name="last_name" placeholder="أحمد" required autocomplete="family-name">
                         </div>
                     </div>
                     <div class="f-row">
                         <div class="fg">
                             <label>البريد الإلكتروني</label>
-                            <input type="email" placeholder="example@company.com">
+                            <input type="email" name="email" placeholder="example@company.com" required autocomplete="email">
                         </div>
                         <div class="fg">
                             <label>رقم الهاتف</label>
-                            <input type="tel" placeholder="+970 5XX XXX XXX">
+                            <input type="tel" name="phone" placeholder="+970 5XX XXX XXX" required autocomplete="tel">
                         </div>
                     </div>
                     <div class="fg">
                         <label>رسالتك</label>
-                        <textarea placeholder="أخبرنا عن مشروعك واحتياجاتك..."></textarea>
+                        <textarea name="message" placeholder="أخبرنا عن مشروعك واحتياجاتك..." required></textarea>
                     </div>
                     <button type="submit" class="f-submit">إرسال الرسالة</button>
                 </form>
@@ -1615,21 +1619,6 @@ function toggleLang() {
     }
 }
 
-/* ---- CONTACT FORM ---- */
-document.getElementById('cForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('.f-submit');
-    const t = T[siteLang];
-    btn.textContent = t.formSuccess || 'Message Sent ✓';
-    btn.style.background = '#4ade80';
-    btn.style.color = '#0f1e2b';
-    setTimeout(() => {
-        btn.textContent = t.formBtn || 'Send Message';
-        btn.style.background = '';
-        btn.style.color = '';
-        this.reset();
-    }, 3500);
-});
 /* ---- BACK TO TOP ---- */
 const topBtn = document.getElementById('topBtn');
 window.addEventListener('scroll', () => {
