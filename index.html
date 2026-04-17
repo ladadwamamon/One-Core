@@ -195,14 +195,14 @@
         }
         .h-content{
             position:relative;z-index:2;
-            text-align:center;max-width:920px;padding:0 32px;
+            text-align:center;max-width:920px;padding:48px 32px 0;
         }
         .h-badge{
             display:inline-flex;align-items:center;gap:9px;
             padding:7px 20px;
             border:1px solid var(--b-acc);border-radius:100px;
             font-size:.8rem;letter-spacing:1px;
-            color:var(--a);margin-bottom:36px;
+            color:var(--a);margin-bottom:36px;margin-top:10px;
             opacity:0;transform:translateY(18px);
             animation:revUp .8s var(--ease) .5s forwards;
         }
@@ -603,6 +603,7 @@
             border-radius:8px;color:#fff;
             font-family:var(--fb);font-size:.93rem;
             outline:none;transition:border-color .3s;
+            appearance:none;
             -webkit-appearance:none;
         }
         .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--a)}
@@ -721,6 +722,8 @@
             .container{padding:0 24px}
             .nav-links{display:none}
             .ham{display:flex}
+            body{cursor:auto}
+            .cdot,.cring{display:none!important}
             .stats-grid{grid-template-columns:1fr 1fr}
             .f-row{grid-template-columns:1fr}
             .foot-top{grid-template-columns:1fr;gap:30px}
@@ -968,19 +971,6 @@
             <!-- 1 -->
             <div class="svc rv d1">
                 <span class="svc-num">01</span>
-                <div class="svc-icon"><i class="fas fa-gears"></i></div>
-                <h3 class="svc-title">إدارة التشغيل</h3>
-                <ul class="svc-list">
-                    <li>تنظيم العمليات اليومية</li>
-                    <li>متابعة تنفيذ المهام</li>
-                    <li>تنسيق العمل بين الأقسام</li>
-                    <li>تقارير تشغيلية ومتابعة الأداء</li>
-                </ul>
-            </div>
-
-            <!-- 2 -->
-            <div class="svc rv d2">
-                <span class="svc-num">02</span>
                 <div class="svc-icon"><i class="fas fa-bullhorn"></i></div>
                 <h3 class="svc-title">إدارة التسويق</h3>
                 <ul class="svc-list">
@@ -992,9 +982,9 @@
                 </ul>
             </div>
 
-            <!-- 3 -->
-            <div class="svc rv d3">
-                <span class="svc-num">03</span>
+            <!-- 2 -->
+            <div class="svc rv d2">
+                <span class="svc-num">02</span>
                 <div class="svc-icon"><i class="fas fa-calculator"></i></div>
                 <h3 class="svc-title">الإدارة المالية والمحاسبة</h3>
                 <ul class="svc-list">
@@ -1006,9 +996,9 @@
                 </ul>
             </div>
 
-            <!-- 4 -->
-            <div class="svc rv d4">
-                <span class="svc-num">04</span>
+            <!-- 3 -->
+            <div class="svc rv d3">
+                <span class="svc-num">03</span>
                 <div class="svc-icon"><i class="fas fa-users"></i></div>
                 <h3 class="svc-title">إدارة الموارد البشرية</h3>
                 <ul class="svc-list">
@@ -1016,6 +1006,33 @@
                     <li>إدارة الرواتب والمكافآت</li>
                     <li>تحليل بيانات الموظفين</li>
                     <li>تكامل الموارد البشرية مع جميع أقسام الشركة</li>
+                </ul>
+            </div>
+
+            <!-- 4 -->
+            <div class="svc rv d4">
+                <span class="svc-num">04</span>
+                <div class="svc-icon"><i class="fas fa-scale-balanced"></i></div>
+                <h3 class="svc-title">الإدارة القانونية</h3>
+                <ul class="svc-list">
+                    <li>تأسيس وتسجيل الشركات</li>
+                    <li>إعداد وتدقيق العقود</li>
+                    <li>استشارات قانونية مستمرة</li>
+                    <li>تنظيم الملفات والالتزامات</li>
+                    <li>ضمان الامتثال القانوني</li>
+                </ul>
+            </div>
+
+            <!-- 5 -->
+            <div class="svc rv d4">
+                <span class="svc-num">05</span>
+                <div class="svc-icon"><i class="fas fa-gears"></i></div>
+                <h3 class="svc-title">إدارة التشغيل</h3>
+                <ul class="svc-list">
+                    <li>تنظيم العمليات اليومية</li>
+                    <li>متابعة تنفيذ المهام</li>
+                    <li>تنسيق العمل بين الأقسام</li>
+                    <li>تقارير تشغيلية ومتابعة الأداء</li>
                 </ul>
             </div>
 
@@ -1122,8 +1139,7 @@
             <span class="sh-tag">تواصل معنا</span>
             <h2 class="sh-title">ابدأ معنا <span class="hl">اليوم</span></h2>
             <p class="sh-desc">
-                هل أنت مستعد لتحويل إدارة أعمالك؟ تواصل معنا وسنقدم لك
-                استشارة مجانية حول كيف يمكننا مساعدتك.
+                 أعمالك أكبر من أن تديرها وحدك — ووراء كل عمل ناجح، فريق محترف.
             </p>
         </div>
         <div class="con-grid">
@@ -1144,10 +1160,17 @@
                         </div>
                     </div>
                     <div class="ci">
+                        <div class="ci-icon"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <div class="ci-lbl">العنوان</div>
+                            <div class="ci-val">رام الله - المصيون</div>
+                        </div>
+                    </div>
+                    <div class="ci">
                         <div class="ci-icon"><i class="fab fa-facebook-f"></i></div>
                         <div>
                             <div class="ci-lbl">فيسبوك</div>
-                            <div class="ci-val"><a href="https://facebook.com/OneCore" target="_blank">OneCore</a></div>
+                            <div class="ci-val"><a href="https://www.facebook.com/share/1B2DvaLaPR/?mibextid=wwXIfr" target="_blank">OneCore</a></div>
                         </div>
                     </div>
                     <div class="ci">
@@ -1162,7 +1185,7 @@
                     <a href="https://wa.me/970597227766" class="soc">
                         <i class="fab fa-whatsapp"></i> واتساب
                     </a>
-                    <a href="https://facebook.com/OneCore" target="_blank" class="soc">
+                    <a href="https://www.facebook.com/share/1B2DvaLaPR/?mibextid=wwXIfr" target="_blank" class="soc">
                         <i class="fab fa-facebook-f"></i> فيسبوك
                     </a>
                     <a href="https://instagram.com/Onecoreps" target="_blank" class="soc">
@@ -1196,10 +1219,11 @@
                         <label>الخدمة المطلوبة</label>
                         <select>
                             <option value="">اختر الخدمة...</option>
-                            <option>إدارة التشغيل</option>
                             <option>إدارة التسويق</option>
                             <option>الإدارة المالية والمحاسبة</option>
                             <option>إدارة الموارد البشرية</option>
+                            <option>الإدارة القانونية</option>
+                            <option>إدارة التشغيل</option>
                             <option>جميع الخدمات (الحزمة المتكاملة)</option>
                         </select>
                     </div>
@@ -1230,10 +1254,11 @@
             <div class="fcol">
                 <h5>خدماتنا</h5>
                 <ul>
-                    <li><a href="#services">إدارة التشغيل</a></li>
                     <li><a href="#services">إدارة التسويق</a></li>
                     <li><a href="#services">الإدارة المالية والمحاسبة</a></li>
                     <li><a href="#services">إدارة الموارد البشرية</a></li>
+                    <li><a href="#services">الإدارة القانونية</a></li>
+                    <li><a href="#services">إدارة التشغيل</a></li>
                 </ul>
             </div>
             <div class="fcol">
@@ -1248,10 +1273,6 @@
         </div>
         <div class="foot-bot">
             <p class="fcopy">© 2025 <em>One Core</em>. جميع الحقوق محفوظة — فلسطين</p>
-            <div class="fleg">
-                <a href="#">سياسة الخصوصية</a>
-                <a href="#">شروط الخدمة</a>
-            </div>
         </div>
     </div>
 </footer>
@@ -1273,20 +1294,26 @@ window.addEventListener('load', () => {
 const cd = document.getElementById('cdot');
 const cr = document.getElementById('cring');
 let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cd.style.left = mx + 'px'; cd.style.top = my + 'px';
-});
-(function loop() {
-    rx += (mx - rx) * .12; ry += (my - ry) * .12;
-    cr.style.left = rx + 'px'; cr.style.top = ry + 'px';
-    requestAnimationFrame(loop);
-})();
-document.querySelectorAll('a,button,.svc,.scard,input,textarea,select,.val-card,.sol-item,.ci,.soc')
-    .forEach(el => {
-        el.addEventListener('mouseenter', () => { cd.classList.add('hov'); cr.classList.add('hov'); });
-        el.addEventListener('mouseleave', () => { cd.classList.remove('hov'); cr.classList.remove('hov'); });
+const desktopCursorEnabled = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+if (desktopCursorEnabled) {
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        cd.style.left = mx + 'px'; cd.style.top = my + 'px';
     });
+    (function loop() {
+        rx += (mx - rx) * .12; ry += (my - ry) * .12;
+        cr.style.left = rx + 'px'; cr.style.top = ry + 'px';
+        requestAnimationFrame(loop);
+    })();
+    document.querySelectorAll('a,button,.svc,.scard,input,textarea,select,.val-card,.sol-item,.ci,.soc')
+        .forEach(el => {
+            el.addEventListener('mouseenter', () => { cd.classList.add('hov'); cr.classList.add('hov'); });
+            el.addEventListener('mouseleave', () => { cd.classList.remove('hov'); cr.classList.remove('hov'); });
+        });
+} else {
+    cd.style.display = 'none';
+    cr.style.display = 'none';
+}
 
 /* ---- NAVBAR ---- */
 const nav = document.getElementById('nav');
@@ -1508,12 +1535,13 @@ function toggleLang() {
         txt('.ch-visual .ch-big-lbl:nth-of-type(2)','Of owner time is wasted on operational details');
 
         txt('#services .sh-desc','Four core management tracks delivered completely as a trusted external partner so you can focus on building your business.');
-        ['Operations Management','Marketing Management','Financial Management & Accounting','Human Resources Management'].forEach((v,i)=>txt(`.svc:nth-child(${i+1}) .svc-title`,v));
+        ['Marketing Management','Financial Management & Accounting','Human Resources Management','Legal Management','Operations Management'].forEach((v,i)=>txt(`.svc:nth-child(${i+1}) .svc-title`,v));
         const enLists = [
-            ['Organize daily operations','Track task execution','Coordinate cross-department work','Operational reporting and performance tracking'],
             ['Manage social media pages','Manage ad campaigns','Create professional content','Performance-based marketing plans','Reporting and continuous optimization'],
             ['Bookkeeping and accounting organization','Track revenues and expenses','Periodic closing and financial reports','Track obligations and payroll','Decision-support analytics'],
-            ['Attendance and leave management','Payroll and incentives management','Employee data analysis','HR integration across all company departments']
+            ['Attendance and leave management','Payroll and incentives management','Employee data analysis','HR integration across all company departments'],
+            ['Company Incorporation & Registration','Contract Drafting & Review','Ongoing Legal Consultations','Organizing Files & Compliance Obligations','Ensuring Legal Compliance'],
+            ['Organize daily operations','Track task execution','Coordinate cross-department work','Operational reporting and performance tracking']
         ];
         $$('.svc-list').forEach((ul,ui)=>$$('li',ul).forEach((li,lii)=>{ if(enLists[ui] && enLists[ui][lii]) li.textContent=enLists[ui][lii]; }));
 
@@ -1529,23 +1557,22 @@ function toggleLang() {
         ['Single contact point for business management','Clear responsibilities and tasks','Flexible service scope based on business type','Reduced administrative, operational, and payroll burdens'].forEach((v,i)=>{ const el=$$('.sol-item')[i]; if(el) el.lastChild.textContent=' '+v;});
 
         txt('#contact .sh-desc','Ready to transform how your business is managed? Contact us and get a free consultation on how we can help.');
-        ['Email','WhatsApp','Facebook','Instagram'].forEach((v,i)=>txt(`.ci:nth-child(${i+1}) .ci-lbl`,v));
+        ['Email','WhatsApp','Address','Facebook','Instagram'].forEach((v,i)=>txt(`.ci:nth-child(${i+1}) .ci-lbl`,v));
+        txt('.ci:nth-child(3) .ci-val','Ramallah - Al-Masyon');
         ['WhatsApp','Facebook','Instagram'].forEach((v,i)=>{ const el=$$('.soc')[i]; if(el) el.lastChild.textContent=' '+v;});
         ['First Name','Last Name','Email','Phone Number','Service Required','Your Message'].forEach((v,i)=>txt(`.fg:nth-child(${i+1}) label`,v));
         const ph = ['John','Doe','example@company.com','+970 5XX XXX XXX','','Tell us about your project and requirements...'];
         const fields = ['.fg:nth-child(1) input','.fg:nth-child(2) input','.fg:nth-child(3) input','.fg:nth-child(4) input','.fg:nth-child(6) textarea'];
         fields.forEach((sel, i)=>{ const el=$(sel); if(el) el.placeholder=ph[i]; });
         const opts = $$('select option');
-        ['Select a service...','Operations Management','Marketing Management','Financial Management & Accounting','Human Resources Management','All Services (Integrated Package)'].forEach((v,i)=>{ if(opts[i]) opts[i].textContent=v; });
+        ['Select a service...','Marketing Management','Financial Management & Accounting','Human Resources Management','Legal Management','Operations Management','All Services (Integrated Package)'].forEach((v,i)=>{ if(opts[i]) opts[i].textContent=v; });
 
         txt('.foot-brand p','A specialized company delivering business support, development, and management services. We act as your integrated external partner to help your business grow.');
         txt('.fcol:nth-child(2) h5','Services');
         txt('.fcol:nth-child(3) h5','Company');
-        ['Operations Management','Marketing Management','Financial Management & Accounting','Human Resources Management'].forEach((v,i)=>txt(`.fcol:nth-child(2) li:nth-child(${i+1}) a`,v));
+        ['Marketing Management','Financial Management & Accounting','Human Resources Management','Legal Management','Operations Management'].forEach((v,i)=>txt(`.fcol:nth-child(2) li:nth-child(${i+1}) a`,v));
         ['About Us','Vision & Mission','Our Value','Contact Us'].forEach((v,i)=>txt(`.fcol:nth-child(3) li:nth-child(${i+1}) a`,v));
         set('.fcopy','© 2025 <em>One Core</em>. All rights reserved — Palestine');
-        txt('.fleg a:nth-child(1)','Privacy Policy');
-        txt('.fleg a:nth-child(2)','Terms of Service');
     } else {
         // restore Arabic original content quickly on switch back by reload-safe reset
         window.location.reload();
