@@ -197,6 +197,10 @@
             position:relative;z-index:2;
             text-align:center;max-width:920px;padding:48px 32px 0;
         }
+        .h-content,.sh-desc,.about-text p,.vm-text,.ch-text p,.svc-list li,.sol-text,.sol-item,.ci-val,.fcopy{
+            overflow-wrap:anywhere;
+            word-break:normal;
+        }
         .h-badge{
             display:inline-flex;align-items:center;gap:9px;
             padding:7px 20px;
@@ -356,6 +360,7 @@
         /* ========================= */
         #vm{background:var(--p-dark)}
         .vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+        .vm-wrap{max-width:1280px;margin:0 auto;padding:0 48px}
         .vm-card{
             background:var(--p-mid);padding:60px 54px;
             position:relative;overflow:hidden;
@@ -577,6 +582,7 @@
         .ci-val{font-size:.95rem;color:var(--ton)}
         .ci-val a{color:var(--ton);transition:color .3s}
         .ci-val a:hover{color:var(--a)}
+        .ci-val .ltr-phone{direction:ltr;unicode-bidi:isolate;display:inline-block}
         .socials{display:flex;gap:10px;margin-top:36px}
         .soc{
             display:flex;align-items:center;gap:10px;
@@ -724,6 +730,32 @@
             .ham{display:flex}
             body{cursor:auto}
             .cdot,.cring{display:none!important}
+            .nav-logo img{height:32px}
+            .lang-btn{padding:7px 10px;font-size:.68rem}
+            #mob{padding:20px 24px}
+            #hero{min-height:620px}
+            .h-content{padding:34px 14px 0}
+            .h-badge{font-size:.68rem;padding:6px 14px;margin-bottom:20px}
+            .h-desc{font-size:.92rem;line-height:1.85;margin:16px auto 34px}
+            .sh{margin-bottom:42px}
+            .sh-title{font-size:clamp(1.45rem,8vw,2rem);line-height:1.35}
+            .sh-desc{font-size:.92rem;line-height:1.75}
+            .vm-wrap{padding:0 24px}
+            .vm-card,.ch-visual,.val-visual,.sol-visual{padding:28px 22px}
+            .svc{padding:34px 24px}
+            .svc-num{font-size:3.5rem;top:18px;left:18px}
+            .svc-title{font-size:1.1rem}
+            .svc-list li{font-size:.86rem}
+            .scard{padding:28px 20px}
+            .scard-num{font-size:2.2rem}
+            .val-card{padding:16px 16px}
+            .val-card-text{font-size:.9rem}
+            .sol-item{padding:14px 16px;font-size:.88rem}
+            .con-grid{gap:34px}
+            .con-items{gap:16px}
+            .ci{gap:12px}
+            .ci-icon{width:40px;height:40px}
+            .socials{flex-wrap:wrap}
             .stats-grid{grid-template-columns:1fr 1fr}
             .f-row{grid-template-columns:1fr}
             .foot-top{grid-template-columns:1fr;gap:30px}
@@ -732,6 +764,25 @@
             .h-logo-en{letter-spacing:-1px}
             .h-btns{flex-direction:column;align-items:center}
             .btn-p,.btn-o{width:100%;text-align:center}
+        }
+        @media(max-width:576px){
+            :root{--sp:60px}
+            .container{padding:0 18px}
+            .vm-wrap{padding:0 18px}
+            .h-logo-en{font-size:clamp(3rem,18vw,4.4rem)}
+            .h-tag{font-size:.86rem;letter-spacing:1px}
+            .btn-p,.btn-o{padding:13px 18px;font-size:.84rem}
+            .stats-grid{grid-template-columns:1fr}
+            .foot-copy{font-size:.72rem}
+            .con-form{padding:24px 16px}
+            .fg input,.fg select,.fg textarea{font-size:.87rem}
+        }
+        @media(max-width:400px){
+            .h-badge{font-size:.6rem}
+            .scard-num{font-size:1.8rem}
+            .svc-num{font-size:2.8rem}
+            .wa-float{width:48px;height:48px}
+            .top-btn{width:40px;height:40px}
         }
     </style>
 </head>
@@ -797,7 +848,6 @@
         </div>
     </div>
     <div class="scroll-hint">
-        <span>تمرير</span>
         <div class="scroll-bar"></div>
     </div>
 </section>
@@ -857,7 +907,7 @@
                     <div class="scard-lbl">رائدون في السوق الفلسطيني</div>
                 </div>
                 <div class="scard">
-                    <div class="scard-num" data-count="1" data-suffix=" جهة">0</div>
+                    <div class="scard-num" data-text="جهة واحدة">جهة واحدة</div>
                     <div class="scard-lbl">نقطة تواصل واحدة لإدارة أعمالك</div>
                 </div>
             </div>
@@ -875,7 +925,7 @@
             <h2 class="sh-title">رؤيتنا <span class="hl">ورسالتنا</span></h2>
         </div>
     </div>
-    <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div class="vm-wrap">
         <div class="vm-grid">
             <div class="vm-card rv-l">
                 <div class="vm-icon"><i class="fas fa-eye"></i></div>
@@ -1156,7 +1206,7 @@
                         <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
                         <div>
                             <div class="ci-lbl">واتساب</div>
-                            <div class="ci-val"><a href="https://wa.me/970597227766">+970 597-227-766</a></div>
+                            <div class="ci-val"><a class="ltr-phone" href="https://wa.me/970597227766">+970 597-227-766</a></div>
                         </div>
                     </div>
                     <div class="ci">
@@ -1214,18 +1264,6 @@
                             <label>رقم الهاتف</label>
                             <input type="tel" placeholder="+970 5XX XXX XXX">
                         </div>
-                    </div>
-                    <div class="fg">
-                        <label>الخدمة المطلوبة</label>
-                        <select>
-                            <option value="">اختر الخدمة...</option>
-                            <option>إدارة التسويق</option>
-                            <option>الإدارة المالية والمحاسبة</option>
-                            <option>إدارة الموارد البشرية</option>
-                            <option>الإدارة القانونية</option>
-                            <option>إدارة التشغيل</option>
-                            <option>جميع الخدمات (الحزمة المتكاملة)</option>
-                        </select>
                     </div>
                     <div class="fg">
                         <label>رسالتك</label>
@@ -1519,7 +1557,7 @@ function toggleLang() {
         ['Integrated professional team across all admin areas','Full confidentiality and data privacy','Flexible service tailored to your business','Lower fixed costs while preserving quality'].forEach((v,i)=>{ const el=$$('.ab-check')[i]; if(el) el.lastChild.textContent=' '+v;});
         ['Commitment to quality and professionalism','Integrated management services','Leaders in Palestinian market','Single point of contact for your business'].forEach((v,i)=> txt(`.scard:nth-child(${i+1}) .scard-lbl`, v));
         txt('.scard:nth-child(3) .scard-num', 'Palestine');
-        document.querySelector('.scard:nth-child(4) .scard-num').dataset.suffix = ' entity';
+        txt('.scard:nth-child(4) .scard-num', 'One Entity');
 
         txt('.vm-card:nth-child(1) .vm-label','Our Vision');
         txt('.vm-card:nth-child(1) .vm-title','To be the first partner for business owners in Palestine');
@@ -1560,12 +1598,10 @@ function toggleLang() {
         ['Email','WhatsApp','Address','Facebook','Instagram'].forEach((v,i)=>txt(`.ci:nth-child(${i+1}) .ci-lbl`,v));
         txt('.ci:nth-child(3) .ci-val','Ramallah - Al-Masyon');
         ['WhatsApp','Facebook','Instagram'].forEach((v,i)=>{ const el=$$('.soc')[i]; if(el) el.lastChild.textContent=' '+v;});
-        ['First Name','Last Name','Email','Phone Number','Service Required','Your Message'].forEach((v,i)=>txt(`.fg:nth-child(${i+1}) label`,v));
-        const ph = ['John','Doe','example@company.com','+970 5XX XXX XXX','','Tell us about your project and requirements...'];
-        const fields = ['.fg:nth-child(1) input','.fg:nth-child(2) input','.fg:nth-child(3) input','.fg:nth-child(4) input','.fg:nth-child(6) textarea'];
+        ['First Name','Last Name','Email','Phone Number','Your Message'].forEach((v,i)=>txt(`.fg:nth-child(${i+1}) label`,v));
+        const ph = ['John','Doe','example@company.com','+970 5XX XXX XXX','Tell us about your project and requirements...'];
+        const fields = ['.fg:nth-child(1) input','.fg:nth-child(2) input','.fg:nth-child(3) input','.fg:nth-child(4) input','.fg:nth-child(5) textarea'];
         fields.forEach((sel, i)=>{ const el=$(sel); if(el) el.placeholder=ph[i]; });
-        const opts = $$('select option');
-        ['Select a service...','Marketing Management','Financial Management & Accounting','Human Resources Management','Legal Management','Operations Management','All Services (Integrated Package)'].forEach((v,i)=>{ if(opts[i]) opts[i].textContent=v; });
 
         txt('.foot-brand p','A specialized company delivering business support, development, and management services. We act as your integrated external partner to help your business grow.');
         txt('.fcol:nth-child(2) h5','Services');
