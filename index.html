@@ -1171,6 +1171,10 @@
                         <div class="val-card-icon"><i class="fas fa-clock"></i></div>
                         <div class="val-card-text">توفير الوقت والجهد على صاحب العمل</div>
                     </div>
+                    <div class="val-card rv d5">
+                        <div class="val-card-icon"><i class="fas fa-arrows-spin"></i></div>
+                        <div class="val-card-text">تنسيق كامل بين الدوائر التشغيلية لضمان سير العمل</div>
+                    </div>
                 </div>
             </div>
             <div class="val-visual rv-r">
@@ -1643,7 +1647,7 @@ function toggleLang() {
         $$('.svc-list').forEach((ul,ui)=>$$('li',ul).forEach((li,lii)=>{ if(enLists[ui] && enLists[ui][lii]) li.textContent=enLists[ui][lii]; }));
 
         txt('#value .sh-desc','Through our model, we provide core values that directly impact business growth.');
-        ['Improve performance efficiency','Organize internal workflow','Reduce administrative risks','Lower operational costs','Save owner time and effort'].forEach((v,i)=>txt(`.val-card:nth-child(${i+1}) .val-card-text`,v));
+        ['Improve performance efficiency','Organize internal workflow','Reduce administrative risks','Lower operational costs','Save owner time and effort','Full coordination between operational departments'].forEach((v,i)=>txt(`.val-card:nth-child(${i+1}) .val-card-text`,v));
         txt('.val-big-lbl:nth-of-type(1)','Commitment to professional, confidential delivery');
         txt('.val-big:nth-of-type(2)','One Point');
         txt('.val-big-lbl:nth-of-type(2)','For communication instead of managing multiple teams');
