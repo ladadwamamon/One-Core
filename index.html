@@ -4,12 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Core — إدارة متكاملة، نتائج أفضل</title>
+    <meta name="description" content="One Core شركة إدارة أعمال متكاملة في فلسطين - الضفة الغربية، مقرها رام الله - المصيون. نقدم خدمات التسويق، المحاسبة، الموارد البشرية، الإدارة القانونية، وإدارة التشغيل للشركات في رام الله، نابلس، الخليل، بيت لحم وجميع المحافظات.">
+    <meta name="keywords" content="One Core, إدارة أعمال فلسطين, إدارة أعمال الضفة الغربية, إدارة أعمال رام الله, إدارة أعمال نابلس, إدارة أعمال الخليل, إدارة أعمال بيت لحم, تسويق, محاسبة, موارد بشرية, إدارة قانونية, إدارة تشغيل, Business Management Palestine, Business Management West Bank, Business Management Ramallah, Business Management Nablus">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="One Core">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="One Core">
+    <meta property="og:title" content="One Core — إدارة متكاملة، نتائج أفضل">
+    <meta property="og:description" content="شركة إدارة أعمال متكاملة في رام الله. تسويق، محاسبة، موارد بشرية، إدارة قانونية وتشغيلية ضمن نموذج موحد.">
+    <meta property="og:url" content="https://onecore.ps/">
+    <meta property="og:image" content="https://onecore.ps/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="One Core — Integrated Management, Better Results">
+    <meta name="twitter:description" content="Integrated business management services in Ramallah: Marketing, Accounting, HR, Legal Management, and Operations.">
+    <meta name="twitter:image" content="https://onecore.ps/logo.png">
+    <link rel="canonical" href="https://onecore.ps/">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="shortcut icon" type="image/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "One Core",
+      "url": "https://onecore.ps/",
+      "logo": "https://onecore.ps/logo.png",
+      "email": "info@onecore.ps",
+      "telephone": "+970597227766",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ramallah",
+        "streetAddress": "Al-Masyon",
+        "addressCountry": "PS"
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/1B2DvaLaPR/?mibextid=wwXIfr",
+        "https://instagram.com/Onecoreps"
+      ],
+      "areaServed": [
+        "Palestine",
+        "West Bank",
+        "Ramallah",
+        "Nablus",
+        "Hebron",
+        "Bethlehem",
+        "Jenin",
+        "Tulkarm",
+        "Qalqilya",
+        "Jericho"
+      ]
+    }
+    </script>
     <style>
         /* ========================= */
         /*   VARIABLES               */
@@ -1248,7 +1296,7 @@
                     <input type="hidden" name="_subject" value="New One Core Website Lead">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://onecore.ps/#contact">
+                    <input type="hidden" name="_next" value="https://onecore.ps/?sent=1#contact">
                     <input type="text" name="_honey" style="display:none">
                     <div class="f-row">
                         <div class="fg">
@@ -1324,9 +1372,14 @@
 <!--   JAVASCRIPT                                                 -->
 <!-- ============================================================ -->
 <script>
+/* ---- START FROM TOP ON REFRESH ---- */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.addEventListener('beforeunload', () => window.scrollTo(0, 0));
+
 /* ---- LOADER ---- */
 document.body.style.overflow = 'hidden';
 window.addEventListener('load', () => {
+    if (!window.location.hash) window.scrollTo(0, 0);
     setTimeout(() => {
         document.getElementById('loader').classList.add('gone');
         document.body.style.overflow = '';
@@ -1626,6 +1679,38 @@ window.addEventListener('scroll', () => {
     topBtn.classList.toggle('show', scrollY > 400);
 });
 topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ---- FORM SUCCESS POPUP ---- */
+const successModal = document.getElementById('successModal');
+const closeSuccessModal = () => successModal.classList.remove('show');
+const successCloseBtn = document.getElementById('closeSuccessModal');
+const successOkBtn = document.getElementById('successOkBtn');
+
+if (successCloseBtn) successCloseBtn.addEventListener('click', closeSuccessModal);
+if (successOkBtn) successOkBtn.addEventListener('click', closeSuccessModal);
+if (successModal) {
+    successModal.addEventListener('click', (e) => {
+        if (e.target === successModal) closeSuccessModal();
+    });
+}
+
+const params = new URLSearchParams(window.location.search);
+if (params.get('sent') === '1' && successModal) {
+    const isEn = document.documentElement.lang === 'en';
+    const titleEl = document.getElementById('successTitle');
+    const textEl = document.getElementById('successText');
+    const okEl = document.getElementById('successOkBtn');
+    if (isEn) {
+        titleEl.textContent = 'Message Sent Successfully';
+        textEl.textContent = 'Thank you for contacting us. We will get back to you as soon as possible.';
+        okEl.textContent = 'Great';
+    }
+    successModal.classList.add('show');
+
+    // Clean query params without reloading
+    const cleanUrl = `${window.location.origin}${window.location.pathname}${window.location.hash}`;
+    window.history.replaceState({}, '', cleanUrl);
+}
 </script>
 
 <!-- WHATSAPP FLOATING BUTTON -->
@@ -1634,10 +1719,26 @@ topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoo
     <span class="wa-tooltip">تواصل معنا</span>
 </a>
 
+<!-- MOBILE CALL BUTTON -->
+<a href="tel:+970597227766" class="call-float" title="اتصال مباشر">
+    <i class="fas fa-phone"></i>
+</a>
+
 <!-- BACK TO TOP -->
 <button id="topBtn" class="top-btn" title="ارجع للأعلى">
     <i class="fas fa-arrow-up"></i>
 </button>
+
+<!-- FORM SUCCESS POPUP -->
+<div id="successModal" class="success-modal" aria-hidden="true">
+    <div class="success-card">
+        <button type="button" id="closeSuccessModal" class="success-close" aria-label="Close">×</button>
+        <div class="success-icon"><i class="fas fa-circle-check"></i></div>
+        <h3 id="successTitle">تم إرسال رسالتك بنجاح</h3>
+        <p id="successText">شكرًا لتواصلك معنا. سنقوم بالرد عليك بأقرب وقت ممكن.</p>
+        <button type="button" id="successOkBtn" class="success-ok">ممتاز</button>
+    </div>
+</div>
 
 <style>
 /* WHATSAPP */
@@ -1704,6 +1805,78 @@ topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoo
     100% { transform: scale(1.7); opacity: 0; }
 }
 
+/* MOBILE CALL */
+.call-float{
+    position:fixed;
+    bottom:32px;
+    left:102px;
+    z-index:888;
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    background:#3b82f6;
+    color:#fff;
+    font-size:1.1rem;
+    box-shadow:0 8px 24px rgba(59,130,246,.35);
+}
+
+/* SUCCESS POPUP */
+.success-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(8,18,27,.62);
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:1200;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .28s ease;
+}
+.success-modal.show{opacity:1;pointer-events:auto}
+.success-card{
+    width:min(92vw,460px);
+    background:var(--p);
+    border:1px solid var(--b-acc);
+    border-radius:16px;
+    padding:28px 24px 22px;
+    text-align:center;
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+    position:relative;
+}
+.success-icon{
+    font-size:2.4rem;
+    color:#22c55e;
+    margin-bottom:10px;
+}
+.success-card h3{font-size:1.3rem;margin-bottom:8px}
+.success-card p{font-size:.95rem;color:var(--tmid);line-height:1.8}
+.success-ok{
+    margin-top:18px;
+    padding:10px 24px;
+    border:none;
+    border-radius:8px;
+    background:var(--a);
+    color:var(--p-dark);
+    font-weight:700;
+    cursor:pointer;
+}
+.success-close{
+    position:absolute;
+    top:8px;
+    left:10px;
+    border:none;
+    background:transparent;
+    color:var(--tmid);
+    font-size:1.6rem;
+    cursor:pointer;
+}
+
 /* BACK TO TOP */
 .top-btn {
     position: fixed;
@@ -1739,6 +1912,7 @@ topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoo
 }
 @media(max-width:768px) {
     .wa-float { bottom:24px; left:20px; width:52px; height:52px; font-size:1.4rem; }
+    .call-float{display:flex;bottom:24px;left:84px}
     .top-btn  { bottom:24px; right:20px; width:42px; height:42px; }
     .wa-tooltip { display:none; }
 }
