@@ -775,7 +775,7 @@
         @media(max-width:768px){
             :root{--sp:72px;--nav-h:68px}
             .container{padding:0 24px}
-            .nav-links{display:none}
+            .nav-links, .nav-cta{display:none !important}
             .ham{display:flex}
             body{cursor:auto}
             .cdot,.cring{display:none!important}
@@ -851,14 +851,14 @@
 <nav id="nav">
     <div class="container">
         <a href="#hero" class="nav-logo"><img src="logo.png" alt="One Core"></a>
+        <ul class="nav-links">
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#value">قيمتنا</a></li>
+            <li><a href="#solution">نموذجنا</a></li>
+        </ul>
         <div class="nav-group">
-            <ul class="nav-links">
-                <li><a href="#about">من نحن</a></li>
-                <li><a href="#services">خدماتنا</a></li>
-                <li><a href="#value">قيمتنا</a></li>
-                <li><a href="#solution">نموذجنا</a></li>
-                <li><a href="#contact" class="nav-cta">تواصل معنا</a></li>
-            </ul>
+            <a href="#contact" class="nav-cta">تواصل معنا</a>
             <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
             <div class="ham" id="ham" onclick="togNav()">
                 <span></span><span></span><span></span>
