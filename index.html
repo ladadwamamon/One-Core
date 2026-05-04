@@ -1597,6 +1597,14 @@
             transition-delay: .40s
         }
 
+        .d5 {
+            transition-delay: .50s
+        }
+
+        .d6 {
+            transition-delay: .60s
+        }
+
         /* ========================= */
         /*   RESPONSIVE              */
         /* ========================= */
@@ -2353,6 +2361,10 @@
                             <div class="val-card-icon"><i class="fas fa-arrows-spin"></i></div>
                             <div class="val-card-text">تنسيق كامل بين الدوائر التشغيلية لضمان سير العمل</div>
                         </div>
+                        <div class="val-card rv d6">
+                            <div class="val-card-icon"><i class="fas fa-users-gear"></i></div>
+                            <div class="val-card-text">خدمات متكاملة ضمن باقة موحّدة و فريق واحد</div>
+                        </div>
                     </div>
                 </div>
                 <div class="val-visual rv-r">
@@ -2811,7 +2823,7 @@
                 $$('.svc-list').forEach((ul, ui) => $$('li', ul).forEach((li, lii) => { if (enLists[ui] && enLists[ui][lii]) li.textContent = enLists[ui][lii]; }));
 
                 txt('#value .sh-desc', 'Through our model, we provide core values that directly impact business growth.');
-                ['Improve performance efficiency', 'Organize internal workflow', 'Reduce administrative risks', 'Lower operational costs', 'Save owner time and effort', 'Full coordination between operational departments'].forEach((v, i) => txt(`.val-card:nth-child(${i + 1}) .val-card-text`, v));
+                ['Improve performance efficiency', 'Organize internal workflow', 'Reduce administrative risks', 'Lower operational costs', 'Save owner time and effort', 'Full coordination between operational departments', 'Integrated services within a unified package and one team'].forEach((v, i) => txt(`.val-card:nth-child(${i + 1}) .val-card-text`, v));
                 txt('.val-big-lbl:nth-of-type(1)', 'Commitment to professional, confidential delivery');
                 txt('.val-visual .val-big:last-of-type', 'One Contact Point');
                 txt('.val-big-lbl:nth-of-type(2)', 'For communication instead of managing multiple teams');
