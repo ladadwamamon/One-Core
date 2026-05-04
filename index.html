@@ -113,7 +113,6 @@
             background: var(--p-dark);
             color: var(--ton);
             overflow-x: hidden;
-            cursor: none;
         }
 
         ::-webkit-scrollbar {
@@ -147,48 +146,6 @@
             padding: 0 48px
         }
 
-        /* ========================= */
-        /*   CURSOR                  */
-        /* ========================= */
-        .cdot {
-            width: 8px;
-            height: 8px;
-            background: var(--a);
-            border-radius: 50%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: width .15s, height .15s, background .15s;
-        }
-
-        .cring {
-            width: 36px;
-            height: 36px;
-            border: 1.5px solid rgba(182, 215, 188, .5);
-            border-radius: 50%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: 9998;
-            transform: translate(-50%, -50%);
-            transition: width .35s var(--ease), height .35s var(--ease), border-color .25s;
-        }
-
-        .cdot.hov {
-            width: 14px;
-            height: 14px;
-            background: var(--a-light)
-        }
-
-        .cring.hov {
-            width: 64px;
-            height: 64px;
-            border-color: rgba(182, 215, 188, .9)
-        }
 
         /* ========================= */
         /*   LOADER                  */
@@ -1766,14 +1723,6 @@
                 display: flex
             }
 
-            body {
-                cursor: auto
-            }
-
-            .cdot,
-            .cring {
-                display: none !important
-            }
 
             .nav-logo img {
                 height: 32px
@@ -2056,9 +2005,6 @@
         </div>
     </div>
 
-    <!-- CURSOR -->
-    <div class="cdot" id="cdot"></div>
-    <div class="cring" id="cring"></div>
 
     <!-- NAVBAR -->
     <nav id="nav">
@@ -2632,30 +2578,6 @@
             }, 2900);
         });
 
-        /* ---- CURSOR ---- */
-        const cd = document.getElementById('cdot');
-        const cr = document.getElementById('cring');
-        let mx = 0, my = 0, rx = 0, ry = 0;
-        const desktopCursorEnabled = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-        if (desktopCursorEnabled) {
-            document.addEventListener('mousemove', e => {
-                mx = e.clientX; my = e.clientY;
-                cd.style.left = mx + 'px'; cd.style.top = my + 'px';
-            });
-            (function loop() {
-                rx += (mx - rx) * .12; ry += (my - ry) * .12;
-                cr.style.left = rx + 'px'; cr.style.top = ry + 'px';
-                requestAnimationFrame(loop);
-            })();
-            document.querySelectorAll('a,button,.svc,.scard,input,textarea,select,.val-card,.sol-item,.ci,.soc')
-                .forEach(el => {
-                    el.addEventListener('mouseenter', () => { cd.classList.add('hov'); cr.classList.add('hov'); });
-                    el.addEventListener('mouseleave', () => { cd.classList.remove('hov'); cr.classList.remove('hov'); });
-                });
-        } else {
-            cd.style.display = 'none';
-            cr.style.display = 'none';
-        }
 
         /* ---- NAVBAR ---- */
         const nav = document.getElementById('nav');
